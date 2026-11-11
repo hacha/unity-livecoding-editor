@@ -1,0 +1,31 @@
+{
+  "name": "com.hacha.livecoding-editor",
+  "version": "0.1.0",
+  "displayName": "LiveCoding Editor",
+  "description": "A small code editor that lives in your scene (world-space Canvas) and reads a hardware keyboard directly, without a soft keyboard or OS text field. Language-agnostic: syntax highlighting and diagnostics are injected by the host. Useful for in-game consoles or live coding in VR/XR.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.inputsystem": "1.11.0",
+    "com.unity.ugui": "2.0.0"
+  },
+  "author": {
+    "name": "hacha",
+    "url": "https://github.com/hacha"
+  },
+  "keywords": [
+    "live coding",
+    "code editor",
+    "text editor",
+    "xr",
+    "vr",
+    "keyboard"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hacha/unity-livecoding-editor.git"
+  },
+  "documentationUrl": "https://github.com/hacha/unity-livecoding-editor#readme",
+  "changelogUrl": "https://github.com/hacha/unity-livecoding-editor/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/hacha/unity-livecoding-editor/blob/main/LICENSE.md"
+}
