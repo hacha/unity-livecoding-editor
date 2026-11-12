@@ -1,5 +1,7 @@
 # LiveCoding Editor
 
+[![openupm](https://img.shields.io/npm/v/com.hacha.livecoding-editor?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.hacha.livecoding-editor/)
+
 シーン内（ワールドスペース Canvas）に置く小さなコードエディタ。ソフトウェアキーボードや OS のテキスト入力欄を通さず、ハードウェアキーボードを直接読む。複数行選択・行コメント・Undo/Redo など、コードを書くときに欲しい操作を備える。ゲーム内コンソールや、VR/XR 内でのライブコーディングなどに使える。
 
 言語には依存せず、シンタックスハイライトと診断（エラー表示）は利用側が注入する。
@@ -8,13 +10,42 @@ English: [README.md](README.md)
 
 ## インストール
 
+### OpenUPM（推奨）
+
+[openupm-cli](https://github.com/openupm/openupm-cli) で:
+
+```sh
+openupm add com.hacha.livecoding-editor
+```
+
+または `Packages/manifest.json` に scoped registry を手で追加する。
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": ["com.hacha.livecoding-editor"]
+    }
+  ],
+  "dependencies": {
+    "com.hacha.livecoding-editor": "0.1.0"
+  }
+}
+```
+
+### Git URL
+
 Package Manager の「Add package from git URL」、または `Packages/manifest.json` に次を追加する。
 
 ```json
 "com.hacha.livecoding-editor": "https://github.com/hacha/unity-livecoding-editor.git#v0.1.0"
 ```
 
-必要なもの: Unity 6000.0 以降、Input System、uGUI（uGUI 2.0 経由の TextMeshPro）。このパッケージの EditMode テストを実行するには、利用側の `manifest.json` に `"testables": ["com.hacha.livecoding-editor"]` を追加する。
+### 必要なもの
+
+Unity 6000.0 以降、Input System、uGUI（uGUI 2.0 経由の TextMeshPro）。このパッケージの EditMode テストを実行するには、利用側の `manifest.json` に `"testables": ["com.hacha.livecoding-editor"]` を追加する。
 
 ## キー操作
 

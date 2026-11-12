@@ -1,5 +1,7 @@
 # LiveCoding Editor
 
+[![openupm](https://img.shields.io/npm/v/com.hacha.livecoding-editor?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.hacha.livecoding-editor/)
+
 A small code editor that lives in your scene (world-space Canvas) and reads a hardware keyboard directly, without going through a soft keyboard or an OS text field. It supports the editing operations you expect when writing code (multi-line selection, line comments, undo/redo, ...). Useful for in-game consoles or live coding in VR/XR.
 
 It is language-agnostic: syntax highlighting and diagnostics (error display) are injected by the host application.
@@ -8,13 +10,42 @@ It is language-agnostic: syntax highlighting and diagnostics (error display) are
 
 ## Installation
 
+### OpenUPM (recommended)
+
+With [openupm-cli](https://github.com/openupm/openupm-cli):
+
+```sh
+openupm add com.hacha.livecoding-editor
+```
+
+Or add the scoped registry to `Packages/manifest.json` by hand:
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": ["com.hacha.livecoding-editor"]
+    }
+  ],
+  "dependencies": {
+    "com.hacha.livecoding-editor": "0.1.0"
+  }
+}
+```
+
+### Git URL
+
 Use "Add package from git URL" in the Package Manager, or add this to `Packages/manifest.json`:
 
 ```json
 "com.hacha.livecoding-editor": "https://github.com/hacha/unity-livecoding-editor.git#v0.1.0"
 ```
 
-Requirements: Unity 6000.0 or later, Input System, and uGUI (TextMeshPro via uGUI 2.0).
+### Requirements
+
+Unity 6000.0 or later, Input System, and uGUI (TextMeshPro via uGUI 2.0).
 
 To run this package's EditMode tests, add `"testables": ["com.hacha.livecoding-editor"]` to your project's `manifest.json`.
 
